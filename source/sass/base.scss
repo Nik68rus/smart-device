@@ -1,0 +1,23 @@
+@import "./variables.scss";
+@import "./mixin.scss";
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: $font-pt-mono;
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 400;
+  font-style: normal;
+  color: $font-color;
+  background-color: #ffffff;
+}
+
+ul {
+  @include list-style();
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}

@@ -1,0 +1,24 @@
+.contacts {
+  display: flex;
+}
+
+.contacts__list {
+  display: flex;
+  align-items: center;
+}
+
+.contacts a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.contacts__item {
+  padding-left: 40px;
+  padding-right: 40px;
+  margin-right: 40px;
+  line-height: 18px;
+}
+
+.contacts__item:last-of-type {
+  margin-right: 0;
+}

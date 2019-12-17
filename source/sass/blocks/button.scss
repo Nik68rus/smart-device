@@ -1,0 +1,15 @@
+@import "./variables.scss";
+
+.button {
+  font-family: $font-roboto-condensed;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #ffffff;
+  border: 1px solid #ffffff;
+  border-radius: 5px;
+  padding: 15px 25px;
+}

@@ -1,0 +1,30 @@
+@import "./variables.scss";
+
+.logo {
+  display: flex;
+  margin-right: 118px;
+}
+
+.logo__image {
+  margin-right: 16px;
+}
+
+.logo__title {
+  color: #ffffff;
+  font-family: $font-roboto-condensed;
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 29px;
+  margin: 0;
+  padding: 0;
+}
+
+.logo__description {
+  color: #788891;
+  font-family: $font-roboto;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 14px;
+  margin: 0;
+  padding: 0;
+}
