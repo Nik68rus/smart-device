@@ -20,6 +20,10 @@
     margin: 0;
     margin-bottom: 1px;
     padding: 0;
+
+    &--black {
+      color: #000000;
+    }
   }
   
   &__description {
@@ -49,7 +53,7 @@
       height: 38px;
     }
 
-    &__text {
+    &__text--header {
       display: none;
     }
   }

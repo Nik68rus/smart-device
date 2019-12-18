@@ -1,0 +1,82 @@
+@import "./variables.scss";
+
+.temp {
+  height: 1000px;
+  border-bottom: 1px solid black;;
+}
+
+.footer {
+  width: 100%;
+
+  &__info {
+    position: relative;
+    width: 73.5%;
+    display: flex;
+    margin: 0 auto;
+    justify-content: space-between;
+  }
+
+  &__address {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__years {
+    position: absolute;
+    bottom: -25px;
+    left: 220px;
+  }
+
+  &__info-wrapper {
+    display: flex;
+  }
+
+  &__wrapper {
+    width: 73.5%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__copyright {
+    border-top: 1px solid #626962;
+  }
+}
+
+@media (max-width: $not-desktop-width) {
+  .footer {
+    &__years {
+      position: relative;
+      bottom: 0;
+      left: 0;
+    }
+
+    &__info {
+      flex-direction: column;
+    }
+
+    &__links {
+      display: flex;
+    }
+
+    &__wrapper span {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: $mobile-width-only) {
+  .footer {
+    &__links {
+      flex-direction: column;
+    }
+
+    &__info-wrapper {
+      flex-direction: column;
+    }
+
+    &__wrapper {
+      flex-direction: column;
+    }
+  }
+}

@@ -1,0 +1,21 @@
+.navigation {
+  &__list {
+    display: flex;
+  }
+}
+
+@media (max-width: $not-desktop-width) {
+  .navigation {
+    &__list {
+      flex-direction: column;
+    }
+  }
+}
+
+@media (max-width: $mobile-width-only) {
+  .navigation {
+    &__column {
+      display: none;
+    }
+  }
+}
