@@ -21,3 +21,21 @@ img {
   max-width: 100%;
   height: auto;
 }
+
+.background {
+  background-color: $dark-color;
+  background-image: url("../img/dark-background@1x.png"),
+    url("../img/circuit-desktop@1x.png"),
+    url("../img/geometry@1x.png");
+  background-repeat: no-repeat;
+  background-position: 0% 100%, 85% 71%;
+}
+
+@media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+  .background {
+    background-image: url("../img/dark-background@2x.png"),
+      url("../img/circuit-desktop@2x.png"),
+      url("../img/geometry@2x.png");
+    background-size: cover, 705px 515px, cover;
+  }
+}

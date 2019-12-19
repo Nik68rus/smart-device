@@ -1,0 +1,63 @@
+@import "../variables.scss";
+@import "../mixin.scss";
+
+.main-screen {
+  box-sizing: border-box;
+  position: relative;
+
+  &__heading {
+    padding: 0;
+    margin: 0;
+    font-family: $font-roboto-condensed;
+    font-size: 80px;
+    line-height: 94px;
+    font-weight: 700;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    color: #ffffff;
+    margin-bottom: 24px;
+  }
+
+  &__description {
+    position: relative;
+    box-sizing: border-box;
+    font-size: 22px;
+    line-height: 34px;
+    color: #ffffff;
+    width: 50%;
+    margin: 0;
+    padding: 0;
+    padding-left: 97px;
+    margin-bottom: 44px;
+
+    &::before {
+      @include pseudo(66px, 2px);
+      background-color: #ffffff;
+      left: 3px;
+      top: 17px;
+    }
+  }
+
+  &__wrapper {
+    width: 74%;
+    margin: 0 auto;
+    padding-top: 213px;
+    padding-bottom: 274px;
+  }
+
+  &__button-wrapper {
+    padding-left: 97px;
+  }
+
+  &__scroll {
+    position: absolute;
+    left: 11%;
+    bottom: 127px;
+    transform: rotate(-90deg);
+    text-decoration: none;
+    color: #ffffff;
+    opacity: 0.5;
+    font-size: 14px;
+    line-height: 16px;
+  }
+}
