@@ -2,6 +2,14 @@
   &__list {
     display: flex;
   }
+
+  &__column {
+    margin-right: 70px;
+
+    &:last-of-type {
+      margin-right: 0;
+    }
+  }
 }
 
 @media (max-width: $not-desktop-width) {

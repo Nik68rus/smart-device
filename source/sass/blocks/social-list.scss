@@ -1,3 +1,36 @@
+@import "../variables.scss";
+
 .social-list {
   display: flex;
+  flex-wrap: wrap;
+
+  &__item {
+    margin-right: 15px;
+  
+    &:last-of-type {
+      margin-right: 0;
+    }
+  }
+
+  &__link {
+    display: block;
+    position: relative;
+    font-size: 0;
+    line-height: 0;
+    color: black;
+
+    &:hover {
+      opacity: 0.8;
+    }
+
+    &:active svg {
+      opacity: 0.6;
+    }
+  }
+}
+
+@media (max-width: $not-desktop-width) {
+  .social-list {
+    padding-top: 11px;
+  }
 }
