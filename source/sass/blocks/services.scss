@@ -1,0 +1,243 @@
+@import "../variables.scss";
+@import "../mixin.scss";
+
+.services {
+  min-width: 220px;
+  background-color: $dark-color;
+  color: #ffffff;
+  padding-top: 90px;
+  padding-bottom: 127px;
+
+  &__wrapper {
+    background-color: $dark-color;
+    width: 61%;
+    margin: 0 auto;
+  }
+
+  &__heading {
+    font-family: $font-roboto-condensed;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 51px;
+    padding: 0;
+    margin-top: 0;
+    margin-bottom: 47px;
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__item {
+    margin-right: 30px;
+    width: calc(33.3% - 20px);
+
+    &:nth-child(3n) {
+      margin-right: 0;
+    }
+
+  }
+
+  &__card {
+    position: relative;
+    display: block;
+    box-sizing: border-box;
+    text-decoration: none;
+    color: #ffffff;
+    background-color: #26353d;
+    font-family: $font-roboto-condensed;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 30px;
+    padding-top: 53px;
+    padding-bottom: 53px;
+    padding-left: 44px;
+    padding-right: 155px;
+    min-height: 622px;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    &::before {
+      z-index: 1;
+      @include pseudo(6px, 6px);
+      border-top: 1px solid #ffffff;
+      border-right: 1px solid #ffffff;
+      transform: rotate(45deg);
+      right: 26px;
+      bottom: 26px;
+    }
+
+    &::after {
+      @include pseudo(63px, 63px);
+      background-color: $blue-color;
+      right: 0;
+      bottom: 0;
+    }
+
+    &--production {
+      background-image: url("../../img/producing-desktop@1x.png");
+    }
+
+    &--instalation {
+      background-image: url("../../img/installing-desktop@1x.png");
+    }
+
+    &--led {
+      background-image: url("../../img/led-desktop@1x.png");
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .services__wrapper {
+    min-width: 950px;
+  }
+}
+
+@media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+  .services__card {
+    &__production {
+      background-image: url("../../img/producing-desktop@2x.png");
+    }
+
+    &__instalation {
+      background-image: url("../../img/installing-desktop@2x.png");
+    }
+
+    &__led {
+      background-image: url("../../img/led-desktop@2x.png");
+    }
+  }
+}
+
+@media (max-width: $not-desktop-width) {
+  .services {
+    padding-top: 50px;
+    padding-bottom: 80px;
+
+    &__wrapper {
+      width: 94%;
+    }
+    
+    &__heading {
+      font-size: 32px;
+      line-height: 45px;
+    }
+
+    &__list {
+      flex-direction: column;
+    }
+
+    &__item {
+      width: 100%;
+      margin-right: 0;
+      margin-bottom: 46px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    &__card {
+      min-height: 256px;
+      padding-top: 42px;
+      padding-right: 505px;
+      padding-left: 47px;
+      padding-bottom: 42px;
+
+      &--production {
+        background-image: url("../../img/producing-tablet@1x.png");
+      }
+  
+      &--instalation {
+        background-image: url("../../img/installing-tablet@1x.png");
+      }
+  
+      &--led {
+        padding-top: 52px;
+        background-image: url("../../img/led-tablet@1x.png");
+      }
+    }
+  }
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    .services__card {
+      &__production {
+        background-image: url("../../img/producing-tablet@2x.png");
+      }
+  
+      &__instalation {
+        background-image: url("../../img/installing-tablet@2x.png");
+      }
+  
+      &__led {
+        background-image: url("../../img/led-tablet@2x.png");
+      }
+    }
+  }
+}
+
+@media (max-width: $mobile-width-only) {
+  .services {
+    padding-bottom: 63px;
+
+    &__wrapper {
+      width: 91%;
+    }
+
+    &__heading {
+      font-size: 28px;
+      line-height: 39px;
+      padding-left: 11px;
+      margin-bottom: 43px;
+    }
+
+    &__item {
+      margin-bottom: 30px;
+    }
+
+    &__card {
+      padding-left: 35px;
+      padding-right: 85px;
+      padding-top: 19px;
+      padding-bottom: 19px;
+
+      &::before {
+        right: 31px;
+        bottom: 29px;
+      }
+  
+
+      &--production {
+        background-image: url("../../img/producing-mobile@1x.png");
+      }
+  
+      &--instalation {
+        background-image: url("../../img/installing-mobile@1x.png");
+      }
+  
+      &--led {
+        padding-top: 29px;
+        background-image: url("../../img/led-mobile@1x.png");
+      }
+
+    }
+  }
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    .services__card {
+      &__production {
+        background-image: url("../../img/producing-mobile@2x.png");
+      }
+  
+      &__instalation {
+        background-image: url("../../img/installing-mobile@2x.png");
+      }
+  
+      &__led {
+        background-image: url("../../img/led-mobile@2x.png");
+      }
+    }
+  }
+}

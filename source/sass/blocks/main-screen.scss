@@ -2,6 +2,7 @@
 @import "../mixin.scss";
 
 .main-screen {
+  min-width: 220px;
   background-color: $dark-color;
   background-image: url("../img/dark-background@1x.png"),
     url("../../img/circuit-desktop@1x.png"),
