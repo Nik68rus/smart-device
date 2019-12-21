@@ -2,19 +2,20 @@
 @import "../mixin.scss";
 
 .about {
-  width: 74%;
+  width: 61%;
   margin: 0 auto;
   padding-top: 55px;
   padding-bottom: 109px;
 
   &__wrapper {
+    box-sizing: border-box;
     position: relative;
-    padding-left: 306px;
-    padding-right: 130px;
+    margin: 0 auto;
+    padding-left: 179px;
 
     &::before {
       @include pseudo(180px, 320px);
-      left: 95px;
+      left: -30px;
       top: 4px;
       background-image: url("../../img/2005-desktop@1x.png");
     }
@@ -49,6 +50,12 @@
   .about__wrapper::before {
     background-image: url("../../img/2005-desktop@2x.png");
     background-size: cover;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .about {
+    min-width: 950px;
   }
 }
 
