@@ -2,8 +2,18 @@
 @import "../mixin.scss";
 
 .main-screen {
-  box-sizing: border-box;
-  position: relative;
+  background-color: $dark-color;
+  background-image: url("../img/dark-background@1x.png"),
+    url("../../img/circuit-desktop@1x.png"),
+    url("../../img/geometry-desktop.svg");
+  background-size: cover, auto, cover;
+  background-repeat: no-repeat;
+  background-position: 80% 50%, 85.3% 70.9%;
+
+  &__content{
+    box-sizing: border-box;
+    position: relative;
+  }
 
   &__heading {
     padding: 0;
@@ -45,6 +55,10 @@
     padding-bottom: 274px;
   }
 
+  &__button--mobile {
+    display: none;
+  }
+
   &__button-wrapper {
     padding-left: 97px;
   }
@@ -61,3 +75,116 @@
     line-height: 16px;
   }
 }
+
+@media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+  .main-screen {
+    background-image: url("../img/dark-background@2x.png"),
+      url("../../img/circuit-desktop@2x.png"),
+      url("../../img/geometry-desktop.svg");
+    background-size: cover, 705px 515px, cover;
+  }
+}
+
+@media (max-width: $not-desktop-width) {
+  .main-screen {
+    background-image: url("../img/dark-background@1x.png"),
+      url("../../img/circuit-tablet@1x.png"),
+      url("../../img/geometry-tablet.svg");
+    background-position: 50%, right 0 top 113px, right 0 top 0;
+    background-size: cover, 260px 340px, 770px 684px;   
+    
+    &__wrapper {
+      box-sizing: border-box;
+      width: 77%;
+      padding-top: 98px;
+      padding-right: 90px;
+      padding-bottom: 162px;
+    }
+
+    &__heading {
+      font-size: 60px;
+      line-height: 70px;
+      margin-bottom: 27px;
+    }
+
+    &__description {
+      font-size: 18px;
+      line-height: 156.8%;
+      padding-left: 51px;
+      margin-bottom: 55px;
+      width: 100%;
+
+      &::before {
+        width: 32px;
+      }
+    }
+
+    &__button-wrapper {
+      padding-left: 52px;
+    }
+
+    &__scroll {
+      display: none;
+    }
+  }
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    .main-screen {
+      background-image: url("../../img/dark-background@2x.png"),
+        url("../../img/circuit-tablet@2x.png"),
+        url("../../img/geometry-tablet.svg");
+    }
+  }
+  
+}
+
+@media (max-width: $mobile-width-only) {
+  .main-screen {
+    background-image: url("../../img/dark-background@1x.png"),
+    url("../../img/circuit-mobile@1x.png"),
+    url("../../img/geometry-mobile.svg");
+  background-size: cover, 294px 220px, 320px 529px;
+  background-position: 50%, right 0 top 92px, right 0 top 0;
+
+  &__wrapper {
+    width: 90%;
+    padding-top: 210px;
+    padding-right: 0;
+    padding-bottom: 69px;
+  }
+
+  &__heading {
+    font-size: 40px;
+    line-height: 47px;
+    margin-bottom: 26px;
+  }
+
+  &__description {
+    font-size: 16px;
+    margin-bottom: 43px;
+    width: 100%;
+  }
+
+  &__button--desktop {
+    display: none;
+  }
+
+  &__button--mobile {
+    display: inline-block;
+  }
+
+  &__button-wrapper {
+    text-align: center;
+    padding-left: 4px;
+  }    
+}
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    .main-screen {
+      background-image: url("../../img/dark-background@2x.png"),
+        url("../../img/circuit-mobile@2x.png"),
+        url("../../img/geometry-mobile.svg");
+    }
+  }
+}
+

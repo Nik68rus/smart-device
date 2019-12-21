@@ -29,3 +29,9 @@
     padding-bottom: 20px;
   }
 }
+
+@media (max-width: $not-desktop-width) {
+  .button {
+    padding: 20px 30px;
+  }
+}
