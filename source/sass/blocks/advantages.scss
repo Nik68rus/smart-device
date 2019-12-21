@@ -6,12 +6,16 @@
   margin: 0 auto;
 
   &__wrapper {
-    padding: 112px 125px;
+    padding-top: 112px;
+    padding-bottom: 50px;
   }
 
   &__list {
     display: flex;
     flex-wrap: wrap;
+    max-width: 1170px;
+    margin: 0 auto;
+    justify-content: center;
     align-items: stretch;
     align-content: stretch;
   }
@@ -20,6 +24,7 @@
     position: relative;
     cursor: pointer;
     min-height: 300px;
+    max-width: 570px;
     box-sizing: border-box;
     width: calc(50% - 15px);
     background-color: #ffffff;
@@ -152,7 +157,7 @@
     }
     
     &__card {
-      min-height: 150px;
+      min-height: 229px;
       width: 100%;
       padding-top: 73px;
       padding-bottom: 24px;
