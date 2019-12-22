@@ -4,6 +4,8 @@
   }
 
   &__column {
+    display: flex;
+    flex-direction: column;
     margin-right: 70px;
 
     &:last-of-type {

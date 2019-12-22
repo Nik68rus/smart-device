@@ -10,7 +10,6 @@ const menuButtons = document.querySelectorAll(`.footer__button`);
 
 const switchVisability = (evt) => {
   const menuContent = evt.target.parentNode;
-  console.log(evt.target.parentNode);
   if (menuContent.classList.contains(`footer__menu--opened`)) {
     menuContent.classList.remove(`footer__menu--opened`);
     menuContent.classList.add(`footer__menu--closed`);
