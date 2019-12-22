@@ -58,6 +58,10 @@
     margin-right: 20px;
   }
 
+  &__button {
+    display: none;
+  }
+
   &__navigation {
     margin-right: 20px;
   }
@@ -215,36 +219,62 @@
       margin-bottom: 21px;
     }
 
+    &__menu {
+      &--closed &-content {
+        display: none;
+      }
+
+      &--closed .footer__button::before {
+        transform: rotate(90deg);
+      }
+    }
+
     &__navigation {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
       width: 100%;
       padding-top: 30px;
       padding-bottom: 26px;
       border-bottom: 1px solid rgba(98, 105, 98, 0.2);
     }
 
+    &__nav-list {
+      padding: 32px;
+    }
+
     &__heading {
       margin-bottom: 0;
       padding-left: 5px;
-      padding-right: 30px;
+      padding-right: 5px;
+    }
+
+    &__address {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row;
+      justify-content: space-between;
+      width: 100%;
+      padding-left: 3.15%;
+      padding-top: 28px;
+    }
+
+    &__button {
+      box-sizing: border-box;
+      display: block;
       position: relative;
+      font-size: 0;
+      line-height: 0;
+      padding-left: 16px;
+      padding-top: 16px;
 
       &::before,
       &::after {
         @include pseudo(16px, 1px);
         background-color: #c4c4c4;
-        right: 6px;
-        top: 7px;
+        left: 0;
+        top: 6px;
       }
-
-      &--closed::before {
-        transform: rotate(90deg);
-      }
-    }
-
-    &__address {
-      width: 100%;
-      padding-left: 3.15%;
-      padding-top: 28px;
     }
 
     &__contacts {

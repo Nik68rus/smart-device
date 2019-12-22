@@ -23,7 +23,7 @@
 @media (max-width: $mobile-width-only) {
   .navigation {
     &__column {
-      display: none;
+      display: block;
     }
   }
 }
