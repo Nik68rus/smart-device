@@ -39,15 +39,6 @@
     padding-left: 49px;
     padding-right: 49px;
   }
-
-  &--border {
-    border: 1px solid #ffffff;
-    font-size: 14px;
-    line-height: 16px;
-    letter-spacing: 0.05em;
-    padding-top: 13px;
-    padding-bottom: 13px;
-  }
 }
 
 @media (max-width: $not-desktop-width) {
@@ -57,11 +48,5 @@
     &--white {
       padding: 14px 50px;
     }
-
-    &--border {
-      padding-top: 15px;
-      padding-bottom: 15px;
-    }
-  
   }
 }
