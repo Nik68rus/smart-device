@@ -40,16 +40,16 @@
         <h2 class="main-screen__heading">Печатные платы</h2>
         <p class="main-screen__description">производство и&nbsp;монтаж, поставка комплектующих, блоков и&nbsp;модулей</p>
         <div class="main-screen__button-wrapper">
-          <a class="main-screen__button main-screen__button--desktop button button--blue" href="#">Получить бесплатную консультацию</a>
-          <a class="main-screen__button main-screen__button--mobile button button--blue" href="#">Бесплатная консультация</a>
+          <a class="main-screen__button main-screen__button--desktop button button--blue" href="#consulting">Получить бесплатную консультацию</a>
+          <a class="main-screen__button main-screen__button--mobile button button--blue" href="#consulting">Бесплатная консультация</a>
         </div>
-        <a class="main-screen__scroll" href="#">Скролл вниз</a>
+        <a class="main-screen__scroll" href="#advantages">Скролл вниз</a>
       </div>
     </section>
   </div>
   <main>
     <h1 class="visually-hidden">Сайт компании Smart Device</h1>
-    <section class="advantages">
+    <section class="advantages" id="advantages">
       <h2 class="visually-hidden">Приемущества</h2>
       <ul class="advantages__list">
         <li class="advantages__card advantages__card--time">
@@ -107,7 +107,7 @@
         </ul>
       </div>
     </section>
-    <section class="feedback">
+    <section class="feedback" id="consulting">
       <div class="feedback__wrapper">
         <h2 class="visually-hidden">Обратная связь</h2>
         <div class="feedback__content form">
@@ -219,9 +219,10 @@
         <button class="button button--blue button--border" type="submit">Отправить</button>
         <input class="visually-hidden" type="checkbox" name="agreement" id="agreement1" checked required>
         <label for="agreement1">Я согласен на обработку  персональных данных</label>
-        <button type="button" aria-label="Закрыть окно">Закрыть</button>
+        <button type="button" id="closeBtn" aria-label="Закрыть окно">Закрыть</button>
       </form>
     </div>
   </section>
+  <script src="./js/app.js"></script>
 </body>
 </html>
