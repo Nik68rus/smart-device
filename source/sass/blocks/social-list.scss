@@ -19,12 +19,12 @@
     line-height: 0;
     color: black;
 
-    &:hover {
-      opacity: 0.8;
+    &:hover svg {
+      opacity: 0.7;
     }
 
     &:active svg {
-      opacity: 0.6;
+      opacity: 0.5;
     }
   }
 }

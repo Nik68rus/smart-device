@@ -9,18 +9,16 @@ const consultingSection = document.getElementById(`consulting`);
 const menuButtons = document.querySelectorAll(`.footer__button`);
 
 const switchVisability = (evt) => {
-  const menuContent = evt.target.parentNode;
-  if (menuContent.classList.contains(`footer__menu--opened`)) {
-    menuContent.classList.remove(`footer__menu--opened`);
-    menuContent.classList.add(`footer__menu--closed`);
+
+  const menu = evt.target.parentNode;
+  if (menu.classList.contains(`footer__menu--opened`)) {
+    menu.classList.remove(`footer__menu--opened`);
+    menu.classList.add(`footer__menu--closed`);
   } else {
-    menuContent.classList.add(`footer__menu--opened`);
-    menuContent.classList.remove(`footer__menu--closed`);
+    menu.classList.add(`footer__menu--opened`);
+    menu.classList.remove(`footer__menu--closed`);
   }
 };
-
-menuButtons.forEach((item) => item.addEventListener(`click`, switchVisability));
-
 
 const closeForm = () => {
   if (modalForm.classList.contains(`popup--showing`)) {
@@ -55,6 +53,18 @@ const onEscPress = (evt) => {
   }
 }
 
+const phoneMask = IMask(
+  document.getElementById(`tel`), {
+    mask: `+{7}(000)000-00-00`
+  }
+);
+
+const popupPhoneMask = IMask(
+  document.getElementById(`tel-popup`), {
+    mask: `+{7}(000)000-00-00`
+  }
+);
+
 if(callBtn) {
   callBtn.addEventListener(`click`, onFormOpen);
 };
@@ -86,14 +96,4 @@ if (consultingBtn && consultingSection) {
   });
 };
 
-const phoneMask = IMask(
-  document.getElementById(`tel`), {
-    mask: `+{7}(000)000-00-00`
-  }
-);
-
-const popupPhoneMask = IMask(
-  document.getElementById(`tel-popup`), {
-    mask: `+{7}(000)000-00-00`
-  }
-);
+menuButtons.forEach((item) => item.addEventListener(`click`, switchVisability));

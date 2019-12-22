@@ -112,6 +112,11 @@
     margin-bottom: 50px;
   }
 
+  input:hover,
+  textarea:hover {
+    box-shadow: 0 0 0 2px #00a7ff;
+  }
+
   textarea {
     width: 100%;
     margin-bottom: 43px;
@@ -169,6 +174,10 @@
     color: #ffffff;
     border: 1px solid #ffffff;
     margin-right: 32px;
+
+    &:hover {
+      opacity: 0.7;
+    }
   }
 
   label {
@@ -179,12 +188,17 @@
     padding-left: 39px;
     padding-top: 8px;
     position: relative;
+    cursor: pointer;
 
     &::before {
       @include pseudo (15px, 15px);
       border: 1px solid #ffffff;
       left: 6px;
       top: 7px;
+    }
+
+    &:hover::before {
+      opacity: 0.7;
     }
   }
 
@@ -195,6 +209,10 @@
     border-left: 1px solid #ffffff;
     border-bottom: 1px solid #ffffff;
     transform: rotate(-45deg);
+  }
+
+  input:checked:hover + label::after {
+    opacity: 0.7;
   }
 }
 
