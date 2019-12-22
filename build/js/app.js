@@ -7,38 +7,52 @@ const advantages = document.getElementById(`advantages`);
 const consultingBtn = document.querySelector(`.main-screen__button`);
 const consultingSection = document.getElementById(`consulting`);
 
-if(callBtn) {
-  callBtn.addEventListener(`click`, (evt) => {
-    evt.preventDefault();
+const closeForm = () => {
+  if (modalForm.classList.contains(`popup--showing`)) {
+    modalForm.classList.remove(`popup--showing`);
+    modalForm.classList.add(`popup--closed`);
+  }
+};
+
+const showForm = () => {
+  if (modalForm.classList.contains(`popup--closed`)) {
     modalForm.classList.remove(`popup--closed`);
     modalForm.classList.add(`popup--showing`);
-  })
+  }
+}
+
+const onFormClose = (evt) => {
+  evt.preventDefault();
+  closeForm();
+  window.removeEventListener(`keydown`, onEscPress);
+}
+
+const onFormOpen = (evt) => {
+  evt.preventDefault();
+  showForm();
+  window.addEventListener(`keydown`, onEscPress);
+}
+
+const onEscPress = (evt) => {
+  if (evt.keyCode === 27) {
+    evt.preventDefault();
+    closeForm();
+  }
+}
+
+if(callBtn) {
+  callBtn.addEventListener(`click`, onFormOpen);
 };
 
 if(closeBtn) {
-  closeBtn.addEventListener(`click`, (evt) => {
-    evt.preventDefault();
-    modalForm.classList.remove(`popup--showing`);
-    modalForm.classList.add(`popup--closed`);
-  })
+  closeBtn.addEventListener(`click`, onFormClose);
 };
-
-window.addEventListener(`keydown`, (evt) => {
-  if (evt.keyCode === 27) {
-    evt.preventDefault();
-    if (modalForm.classList.contains(`popup--showing`)) {
-      modalForm.classList.remove(`popup--showing`);
-      modalForm.classList.add(`popup--closed`);
-    }
-  }
-});
 
 if (modalForm) {
   modalForm.addEventListener(`click`, (evt) => {
     const target = evt.target;
     if (target.classList.contains(`popup`)) {
-      target.classList.remove(`popup--showing`);
-      target.classList.add(`popup--closed`);
+      closeForm();
     };
   });
 };
@@ -56,3 +70,15 @@ if (consultingBtn && consultingSection) {
     moveTo.move(consultingSection);
   });
 };
+
+const phoneMask = IMask(
+  document.getElementById(`tel`), {
+    mask: `+{7}(000)000-00-00`
+  }
+);
+
+const popupPhoneMask = IMask(
+  document.getElementById(`tel-popup`), {
+    mask: `+{7}(000)000-00-00`
+  }
+);
