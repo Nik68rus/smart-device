@@ -7,6 +7,14 @@ const advantages = document.getElementById(`advantages`);
 const consultingBtn = document.querySelector(`.main-screen__button`);
 const consultingSection = document.getElementById(`consulting`);
 const menuButtons = document.querySelectorAll(`.footer__button`);
+const userName = document.querySelector(`#name-popup`);
+const phone = document.querySelector(`#tel-popup`);
+const question = document.querySelector(`#question-popup`);
+let isStorageSupport = true;
+let storageName = ``;
+let storagePhone = ``;
+let storageQuestion = ``;
+const form = document.querySelector(`.popup__form form`);
 
 const switchVisability = (evt) => {
 
@@ -31,6 +39,18 @@ const showForm = () => {
   if (modalForm.classList.contains(`popup--closed`)) {
     modalForm.classList.remove(`popup--closed`);
     modalForm.classList.add(`popup--showing`);
+  }
+  if (userName) {
+    userName.focus();
+    userName.value = storageName;
+  }
+
+  if (phone) {
+    phone.value = storagePhone;
+  }
+
+  if (question) {
+    question.value = storageQuestion;
   }
 }
 
@@ -97,3 +117,21 @@ if (consultingBtn && consultingSection) {
 };
 
 menuButtons.forEach((item) => item.addEventListener(`click`, switchVisability));
+
+try {
+	storageName = localStorage.getItem(`userName`);
+  storagePhone = localStorage.getItem(`phone`);
+  storageQuestion = localStorage.getItem(`question`);
+} catch (err) {
+	isStorageSupport = false;
+}
+
+if (form) {
+  form.addEventListener(`submit`, () => {
+    if (isStorageSupport) {
+      localStorage.setItem(`userName`, userName.value);
+      localStorage.setItem(`phone`, phone.value);
+      localStorage.setItem(`question`, question.value);
+    }    
+  })
+};
