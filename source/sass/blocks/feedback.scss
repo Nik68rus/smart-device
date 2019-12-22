@@ -1,0 +1,254 @@
+@import "../variables.scss";
+
+.feedback {
+  padding-top: 94px;
+  padding-bottom: 113px;
+  min-width: 220px;
+  background-color: $blue-color;
+  background-image: url("../../img/airplane@1x.png"), url("../../img/form-triangles@1x.png");
+  background-repeat: no-repeat;
+  background-position: 25% 42%, 100% 63%;
+  color: #ffffff;
+
+  p:first-child {
+    font-family: $font-roboto-condensed;
+    font-size: 36px;
+    line-height: 51px;
+    margin-bottom: 8px;
+    padding-left: 0;
+    margin-left: -4px;
+  }
+
+  p {
+    margin: 0;
+    padding: 0;
+    margin-bottom: 50px;
+  }
+
+  &__wrapper {
+    width: 61%;
+    margin: 0 auto;
+    box-sizing: border-box;
+  }
+
+  &__content {
+    box-sizing: border-box;
+    padding-left: 15px;
+    width: 50%;
+    margin-left: auto;
+  }
+
+  form {
+    display: flex;
+    flex-wrap: wrap;
+
+    textarea {
+      width: 100%;
+      margin-bottom: 43px;
+      padding: 11px 16px;
+      resize: none;
+    }
+
+    input {
+      padding: 14px 16px;
+    }
+
+    input,
+    textarea {
+      background-color: rgba(256, 256, 256, 0.1);
+      border: none;
+      color: #ffffff;
+      font-family: $font-pt-mono;
+      font-size: 16px;
+      line-height: 22px;
+      font-weight: 400;
+    }
+
+    input::placeholder,
+    textarea::placeholder {
+      color: #ffffff;
+    }
+
+    input[type=text],
+    input[type=tel] {
+      box-sizing: border-box;
+      width: calc(50% - 15px);
+      margin-bottom: 41px;
+    }
+
+    input[type=text] {
+      margin-right: 30px;
+    }
+
+    button,
+    label {
+      width: calc(50% - 16px);
+    }
+
+    button {
+      margin-right: 32px;
+    }
+
+    label {
+      box-sizing: border-box;
+      font-size: 14px;
+      line-height: 16px;
+      opacity: 0.8;
+      padding-left: 39px;
+      padding-top: 8px;
+      position: relative;
+
+      &::before {
+        @include pseudo (15px, 15px);
+        border: 1px solid #ffffff;
+        left: 6px;
+        top: 7px;
+      }
+    }
+
+    input:checked + label::after {
+      @include pseudo(6px, 4px);
+      top: 12px;
+      left: 12px;
+      border-left: 1px solid #ffffff;
+      border-bottom: 1px solid #ffffff;
+      transform: rotate(-45deg);
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .feedback__wrapper {
+    min-width: 950px;
+  }
+}
+
+@media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+  .feedback {
+    background-image: url("../../img/airplane@2x.png"), url("../../img/form-triangles@2x.png");
+    background-size: 510px, cover;
+  }
+}
+
+@media (max-width: $not-desktop-width) {
+  .feedback {
+    background-image: none;
+    padding-top: 80px;
+    padding-left: 57px;
+    padding-right: 67px;
+    padding-bottom: 102px;
+
+    &__wrapper {
+      width: 94%;
+    }
+
+    &__content {
+      width: 100%;
+      margin: 0 auto;
+    }
+
+    p:first-child {
+      font-size: 32px;
+      line-height: 45px;
+      margin-bottom: 16px;
+    }
+
+    p {
+      margin-bottom: 53px;
+    }
+
+    form {
+      input[type=text],
+      input[type=tel] {
+        margin-bottom: 46px;
+      }
+
+      textarea {
+        margin-bottom: 45px;
+        padding: 10px 18px 15px;
+      }
+
+      input {
+        padding: 14px 18px;
+      }
+
+      label {
+        padding-left: 42px;
+        padding-top: 9px;
+
+        &::before {
+          left: 8px;
+          top: 10px;
+        }
+      }
+
+      input:checked + label::after {
+        @include pseudo(6px, 4px);
+        top: 15px;
+      }
+    }
+  }
+}
+
+@media (max-width: $mobile-width-only) {
+  .feedback {
+    padding-top: 31px;
+    padding-left: 0;
+    padding-right: 0;
+    padding-bottom: 42px;
+
+    &__wrapper {
+      width: 91%;
+    }
+
+    &__content {
+      padding-left: 0;
+    }
+
+    p:first-child {
+      font-size: 28px;
+      line-height: 39px;
+      margin-bottom: 13px;
+      padding-left: 5px;
+    }
+
+    p {
+      margin-bottom: 26px;
+    }
+
+    form {
+      input[type=text],
+      input[type=tel] {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 32px;
+      }
+
+      textarea {
+        height: 79px;
+        margin-bottom: 29px;
+      }
+
+      button {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 21px;
+      }
+
+      label {
+        width: 100%;
+        padding-left: 35px;
+
+        &::before {
+          left: 1px;
+        }
+      }
+
+      input:checked + label::after {
+      left: 7px;
+      }
+  
+    }
+  }
+
+}

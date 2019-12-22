@@ -21,7 +21,7 @@
     line-height: 51px;
     padding: 0;
     margin-top: 0;
-    margin-bottom: 47px;
+    margin-bottom: 50px;
   }
 
   &__list {
@@ -50,11 +50,11 @@
     font-weight: 400;
     font-size: 20px;
     line-height: 30px;
-    padding-top: 53px;
+    padding-top: 51px;
     padding-bottom: 53px;
     padding-left: 44px;
     padding-right: 155px;
-    min-height: 622px;
+    min-height: 621px;
     background-repeat: no-repeat;
     background-size: cover;
 
@@ -65,7 +65,7 @@
       border-right: 1px solid #ffffff;
       transform: rotate(45deg);
       right: 26px;
-      bottom: 26px;
+      bottom: 28px;
     }
 
     &::after {
@@ -117,7 +117,7 @@
     padding-bottom: 80px;
 
     &__wrapper {
-      width: 94%;
+      width: 93%;
     }
     
     &__heading {
@@ -132,7 +132,7 @@
     &__item {
       width: 100%;
       margin-right: 0;
-      margin-bottom: 46px;
+      margin-bottom: 47px;
 
       &:last-child {
         margin-bottom: 0;
@@ -140,11 +140,11 @@
     }
 
     &__card {
-      min-height: 256px;
-      padding-top: 42px;
+      min-height: 254px;
+      padding-top: 39px;
       padding-right: 505px;
-      padding-left: 47px;
-      padding-bottom: 42px;
+      padding-left: 43px;
+      padding-bottom: 39px;
 
       &--production {
         background-image: url("../../img/producing-tablet@1x.png");
@@ -194,7 +194,7 @@
     }
 
     &__item {
-      margin-bottom: 30px;
+      margin-bottom: 32px;
     }
 
     &__card {
