@@ -7,7 +7,7 @@
   background-color: $blue-color;
   background-image: url("../img/airplane@1x.png"), url("../img/form-triangles@1x.png");
   background-repeat: no-repeat;
-  background-position: 25% 42%, 100% 63%;
+  background-position: calc(40% - 210px) 42%, 100% 63%;
   color: #ffffff;
 
   &__wrapper {
