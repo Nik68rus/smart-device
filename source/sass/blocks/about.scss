@@ -12,6 +12,7 @@
     position: relative;
     margin: 0 auto;
     padding-left: 179px;
+    padding-right: 5px;
 
     &::before {
       @include pseudo(180px, 320px);

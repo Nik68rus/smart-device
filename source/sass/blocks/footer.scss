@@ -71,7 +71,7 @@
   }
 
   &__navigation {
-    margin-right: 20px;
+    margin-right: 45px;
   }
 
   &__address {
@@ -138,6 +138,7 @@
       color: $dark-color;
       letter-spacing: 0.04em;
       padding-top: 16px;
+      padding-left: 15px;
     }
 
     &__links {
@@ -225,6 +226,7 @@
 
     &__years {
       margin-bottom: 21px;
+      padding-left: 3px;
     }
 
     &__menu {

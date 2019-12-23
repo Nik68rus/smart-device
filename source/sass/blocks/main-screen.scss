@@ -9,7 +9,7 @@
     url("../../img/geometry-desktop.svg");
   background-size: cover, auto, cover;
   background-repeat: no-repeat;
-  background-position: 80% 50%, 85.3% 70.9%;
+  background-position: 80% 50%, 85.3% 70.9%, 82.5% 49%;
 
   &__content{
     box-sizing: border-box;
@@ -83,7 +83,7 @@
     background-image: url("../img/dark-background@2x.png"),
       url("../../img/circuit-desktop@2x.png"),
       url("../../img/geometry-desktop.svg");
-    background-size: cover, 705px 515px, cover;
+    background-size: cover, 705px 515px, 35%;
   }
 }
 
@@ -93,7 +93,7 @@
       url("../../img/circuit-tablet@1x.png"),
       url("../../img/geometry-tablet.svg");
     background-position: 50%, right 0 top 113px, right 0 top 0;
-    background-size: cover, 260px 340px, 770px 684px;   
+    background-size: cover, 260px 340px, 43%;   
     
     &__wrapper {
       box-sizing: border-box;
@@ -145,7 +145,7 @@
     background-image: url("../../img/dark-background@1x.png"),
     url("../../img/circuit-mobile@1x.png"),
     url("../../img/geometry-mobile.svg");
-  background-size: cover, 294px 220px, 320px 529px;
+  background-size: cover, 294px 220px, 45%;
   background-position: 50%, right 0 top 92px, right 0 top 0;
 
   &__wrapper {
