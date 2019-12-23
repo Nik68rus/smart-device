@@ -1,26 +1,26 @@
 .background {
-  background-image: url("../../img/background-triangles-desktop@1x.png");
+  background-image: url("../img/background-triangles-desktop@1x.png");
   background-size: cover;
   background-position: 0 31%;
 }
 
 @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
   .background {
-    background-image: url("../../img/background-triangles-desktop@2x.png");
+    background-image: url("../img/background-triangles-desktop@2x.png");
   }
 }
 
 
 @media (max-width: $not-desktop-width) {
   .background{
-    background-image: url("../../img/background-triangles-tablet@1x.png");
+    background-image: url("../img/background-triangles-tablet@1x.png");
     background-size: 75%;
     background-position-x: 105%;
   }
 
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
     .background {
-      background-image: url("../../img/background-triangles-tablet@2x.png");
+      background-image: url("../img/background-triangles-tablet@2x.png");
     }
   }
 }

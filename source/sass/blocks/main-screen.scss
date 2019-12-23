@@ -5,8 +5,8 @@
   min-width: 220px;
   background-color: $dark-color;
   background-image: url("../img/dark-background@1x.png"),
-    url("../../img/circuit-desktop@1x.png"),
-    url("../../img/geometry-desktop.svg");
+    url("../img/circuit-desktop@1x.png"),
+    url("../img/geometry-desktop.svg");
   background-size: cover, auto, cover;
   background-repeat: no-repeat;
   background-position: 80% 50%, 85.3% 70.9%, 82.5% 49%;
@@ -81,8 +81,8 @@
 @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
   .main-screen {
     background-image: url("../img/dark-background@2x.png"),
-      url("../../img/circuit-desktop@2x.png"),
-      url("../../img/geometry-desktop.svg");
+      url("../img/circuit-desktop@2x.png"),
+      url("../img/geometry-desktop.svg");
     background-size: cover, 705px 515px, 35%;
   }
 }
@@ -90,8 +90,8 @@
 @media (max-width: $not-desktop-width) {
   .main-screen {
     background-image: url("../img/dark-background@1x.png"),
-      url("../../img/circuit-tablet@1x.png"),
-      url("../../img/geometry-tablet.svg");
+      url("../img/circuit-tablet@1x.png"),
+      url("../img/geometry-tablet.svg");
     background-position: 50%, right 0 top 113px, right 0 top 0;
     background-size: cover, 260px 340px, 43%;   
     
@@ -132,9 +132,9 @@
 
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
     .main-screen {
-      background-image: url("../../img/dark-background@2x.png"),
-        url("../../img/circuit-tablet@2x.png"),
-        url("../../img/geometry-tablet.svg");
+      background-image: url("../img/dark-background@2x.png"),
+        url("../img/circuit-tablet@2x.png"),
+        url("../img/geometry-tablet.svg");
     }
   }
   
@@ -142,9 +142,9 @@
 
 @media (max-width: $mobile-width-only) {
   .main-screen {
-    background-image: url("../../img/dark-background@1x.png"),
-    url("../../img/circuit-mobile@1x.png"),
-    url("../../img/geometry-mobile.svg");
+    background-image: url("../img/dark-background@1x.png"),
+    url("../img/circuit-mobile@1x.png"),
+    url("../img/geometry-mobile.svg");
   background-size: cover, 294px 220px, 45%;
   background-position: 50%, right 0 top 92px, right 0 top 0;
 
@@ -183,9 +183,9 @@
 
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
     .main-screen {
-      background-image: url("../../img/dark-background@2x.png"),
-        url("../../img/circuit-mobile@2x.png"),
-        url("../../img/geometry-mobile.svg");
+      background-image: url("../img/dark-background@2x.png"),
+        url("../img/circuit-mobile@2x.png"),
+        url("../img/geometry-mobile.svg");
     }
   }
 }

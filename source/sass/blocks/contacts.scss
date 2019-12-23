@@ -44,12 +44,12 @@
   }
 
   &__item--mail a::before {
-    background-image: url("../../img/icon-mail.svg");
+    background-image: url("../img/icon-mail.svg");
     top: 2px;
   }
 
   &__item--phone a::before {
-    background-image: url("../../img/icon-phone.svg");
+    background-image: url("../img/icon-phone.svg");
     left: 6px;
   }
 }

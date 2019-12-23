@@ -40,35 +40,35 @@
     }
 
     &--time::before {
-      background-image: url("../../img/icon-timer.svg");
+      background-image: url("../img/icon-timer.svg");
     }
 
     &--time:hover::before {
-      background-image: url("../../img/icon-timer-hover.svg");
+      background-image: url("../img/icon-timer-hover.svg");
     }
 
     &--supplier::before {
-      background-image: url("../../img/icon-suppliers.svg");
+      background-image: url("../img/icon-suppliers.svg");
     }
 
     &--supplier:hover::before {
-      background-image: url("../../img/icon-suppliers-hover.svg");
+      background-image: url("../img/icon-suppliers-hover.svg");
     }
 
     &--confidence::before {
-      background-image: url("../../img/icon-confidence.svg");
+      background-image: url("../img/icon-confidence.svg");
     }
 
     &--confidence:hover::before {
-      background-image: url("../../img/icon-confidence-hover.svg");
+      background-image: url("../img/icon-confidence-hover.svg");
     }
 
     &--price::before {
-      background-image: url("../../img/icon-offer.svg");
+      background-image: url("../img/icon-offer.svg");
     }
 
     &--price:hover::before {
-      background-image: url("../../img/icon-offer-hover.svg");
+      background-image: url("../img/icon-offer-hover.svg");
     }
 
     &:nth-child(2n) {

@@ -5,7 +5,7 @@
   padding-bottom: 113px;
   min-width: 220px;
   background-color: $blue-color;
-  background-image: url("../../img/airplane@1x.png"), url("../../img/form-triangles@1x.png");
+  background-image: url("../img/airplane@1x.png"), url("../img/form-triangles@1x.png");
   background-repeat: no-repeat;
   background-position: 25% 42%, 100% 63%;
   color: #ffffff;
@@ -32,7 +32,7 @@
 
 @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
   .feedback {
-    background-image: url("../../img/airplane@2x.png"), url("../../img/form-triangles@2x.png");
+    background-image: url("../img/airplane@2x.png"), url("../img/form-triangles@2x.png");
     background-size: 510px, cover;
   }
 }

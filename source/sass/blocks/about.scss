@@ -18,7 +18,7 @@
       @include pseudo(180px, 320px);
       left: -30px;
       top: 4px;
-      background-image: url("../../img/2005-desktop@1x.png");
+      background-image: url("../img/2005-desktop@1x.png");
     }
   }
 
@@ -49,7 +49,7 @@
 
 @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
   .about__wrapper::before {
-    background-image: url("../../img/2005-desktop@2x.png");
+    background-image: url("../img/2005-desktop@2x.png");
     background-size: cover;
   }
 }
@@ -103,7 +103,7 @@
 
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
     .about__wrapper::before {
-      background-image: url("../../img/2005-tablet@2x.png");
+      background-image: url("../img/2005-tablet@2x.png");
     }
   }
 }
