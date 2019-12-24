@@ -27,9 +27,13 @@
       }
 
       input,
-      button[type=submit],
-      label {
+      button[type=submit] {
         width: 100%;
+        margin-right: 0;
+      }
+
+      label {
+        width: calc(100% - 1px);
         margin-right: 0;
       }
 
@@ -61,17 +65,21 @@
       input:checked + label::after {
       left: 5px;
       }
-
-      input[type=checkbox] {
-        bottom: 44px;
-        left: 50px;
-      }
     }
   }
 
   form {
     display: flex;
     flex-wrap: wrap;
+  }
+
+  input[type=checkbox] {
+    width: 1px;
+    height: 20px;
+    border: 0;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
   }
 
   button[type=button] {
@@ -159,7 +167,7 @@
 
   button,
   label {
-    width: calc(50% - 16px);
+    width: calc(50% - 17px);
   }
 
   button {
