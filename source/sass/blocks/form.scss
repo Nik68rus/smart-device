@@ -27,13 +27,10 @@
       }
 
       input,
+      label,
+      span,
       button[type=submit] {
         width: 100%;
-        margin-right: 0;
-      }
-
-      label {
-        width: calc(100% - 1px);
         margin-right: 0;
       }
 
@@ -73,15 +70,23 @@
     flex-wrap: wrap;
   }
 
+  span {
+    position: relative;
+  }
+
   input[type=checkbox] {
+    position: absolute;
     width: 1px;
-    height: 20px;
+    height: 1px;
+    margin: -1px;
     border: 0;
     padding: 0;
-    margin: 0;
+    white-space: nowrap;
     clip-path: inset(100%);
-    clip: rect(0 0 0 0);  
+    clip: rect(0 0 0 0);
     overflow: hidden;
+    left: 15px;
+    top: 20px;
   }
 
   button[type=button] {
@@ -168,8 +173,8 @@
   }
 
   button,
-  label {
-    width: calc(50% - 17px);
+  span {
+    width: calc(50% - 16px);
   }
 
   button {
@@ -196,13 +201,13 @@
   }
 
   label {
+    display: block;
     box-sizing: border-box;
     font-size: 14px;
     line-height: 16px;
     opacity: 0.8;
     padding-left: 39px;
     padding-top: 8px;
-    position: relative;
     cursor: pointer;
 
     &::before {
@@ -309,8 +314,11 @@
       margin-bottom: 21px;
     }
 
-    label {
+    span {
       width: 100%;
+    }
+
+    label {
       padding-left: 35px;
 
       &::before {

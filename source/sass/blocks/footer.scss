@@ -18,6 +18,11 @@
     opacity: 0.9;
   }
 
+  button {
+    border: none;
+    background-color: transparent;
+  }
+
   &__logo {
     margin-bottom: 54px;
   }
@@ -210,7 +215,7 @@
 
   .footer {
     &__info {
-      padding-bottom: 26px;
+      padding-bottom: 0;
     }
 
     &__links {
@@ -230,6 +235,9 @@
     }
 
     &__menu {
+      padding-top: 28px;
+      padding-bottom: 28px;
+
       &-content {
         width: 100%;
       }
@@ -248,8 +256,6 @@
       flex-wrap: wrap;
       justify-content: space-between;
       width: 100%;
-      padding-top: 30px;
-      padding-bottom: 21px;
       border-bottom: 1px solid rgba(98, 105, 98, 0.2);
     }
 
@@ -270,7 +276,6 @@
       justify-content: space-between;
       width: 100%;
       padding-left: 3.15%;
-      padding-top: 28px;
     }
 
     &__button {
@@ -287,12 +292,12 @@
         @include pseudo(16px, 1px);
         background-color: #c4c4c4;
         left: 0;
-        top: 6px;
+        top: 8px;
       }
     }
 
     &__contacts {
-      padding-top: 27px;
+      padding-top: 30px;
       padding-left: 5px;
       padding-right: 10px;
     }
@@ -303,7 +308,7 @@
     }
 
     &__copyright {
-      padding-top: 28px;
+      padding-top: 26px;
       padding-bottom: 26px;
 
       &-confidence {
