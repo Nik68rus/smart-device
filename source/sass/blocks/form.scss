@@ -79,6 +79,8 @@
     border: 0;
     padding: 0;
     margin: 0;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);  
     overflow: hidden;
   }
 
