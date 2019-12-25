@@ -35,6 +35,7 @@
     if (modalForm.classList.contains(`popup--showing`)) {
       modalForm.classList.remove(`popup--showing`);
       modalForm.classList.add(`popup--closed`);
+      document.getElementsByTagName(`body`)[0].style.overflow = ``;
     }
   };
 
@@ -42,6 +43,7 @@
     if (modalForm.classList.contains(`popup--closed`)) {
       modalForm.classList.remove(`popup--closed`);
       modalForm.classList.add(`popup--showing`);
+      document.getElementsByTagName(`body`)[0].style.overflow = `hidden`;
     }
     if (userName) {
       userName.focus();
