@@ -20,14 +20,21 @@
   const form = document.querySelector(`.popup__form form`);
 
   const switchVisability = (evt) => {
-
+    let wasVisible = false;
     const menu = evt.target.parentNode;
-    if (menu.classList.contains(`footer__menu--opened`)) {
-      menu.classList.remove(`footer__menu--opened`);
-      menu.classList.add(`footer__menu--closed`);
-    } else {
-      menu.classList.add(`footer__menu--opened`);
+    const menus = document.querySelectorAll(`.footer__menu`);
+
+    wasVisible = menu.classList.contains(`footer__menu--opened`) ? true : false;
+    menus.forEach((item) => {
+      if (item.classList.contains(`footer__menu--opened`)) {
+        item.classList.remove(`footer__menu--opened`);
+        item.classList.add(`footer__menu--closed`);
+      }
+    });
+
+    if (!wasVisible) {
       menu.classList.remove(`footer__menu--closed`);
+      menu.classList.add(`footer__menu--opened`);
     }
   };
 
