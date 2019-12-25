@@ -128,6 +128,12 @@
   }
 }
 
+@media (min-width: $max-width) {
+  .footer__info {
+    max-width: 1415px;
+  }
+}
+
 @media (max-width: $not-desktop-width) {
   .temp {
     height: 3498px;

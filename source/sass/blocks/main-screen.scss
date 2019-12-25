@@ -64,6 +64,10 @@
     padding-left: 97px;
   }
 
+  &__button {
+    max-width: 495px;
+  }
+
   &__scroll {
     position: absolute;
     left: 11.2%;
@@ -75,6 +79,12 @@
     font-size: 14px;
     line-height: 16px;
     cursor: pointer;
+  }
+}
+
+@media (min-width: $max-width) {
+  .main-screen__wrapper {
+    max-width: 1421px;
   }
 }
 
@@ -124,6 +134,10 @@
     &__button-wrapper {
       padding-left: 52px;
     }
+
+    &__button {
+      max-width: 430px;
+    }  
 
     &__scroll {
       display: none;

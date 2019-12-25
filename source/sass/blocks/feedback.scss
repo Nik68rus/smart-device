@@ -30,6 +30,12 @@
   }
 }
 
+@media (min-width: $max-width) {
+  .feedback__wrapper {
+    max-width: 1171px;
+  }
+}
+
 @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
   .feedback {
     background-image: url("../img/airplane@2x.png"), url("../img/form-triangles@2x.png");

@@ -18,6 +18,12 @@
   }
 }
 
+@media (min-width: $max-width) {
+  .header__wrapper {
+    max-width: 1411px;
+  }
+}
+
 @media (max-width: $not-desktop-width) {
   .header {
     padding-top: 20px;

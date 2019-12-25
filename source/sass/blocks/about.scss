@@ -60,6 +60,12 @@
   }
 }
 
+@media (min-width: $max-width) {
+  .about {
+    max-width: 1171px;
+  }
+}
+
 @media (max-width: $not-desktop-width) {
   .about {
     width: 94%;
