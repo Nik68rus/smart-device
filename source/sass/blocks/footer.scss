@@ -129,7 +129,8 @@
 }
 
 @media (min-width: $max-width) {
-  .footer__info {
+  .footer__info,
+  .footer__wrapper {
     max-width: 1415px;
   }
 }
